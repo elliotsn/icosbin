@@ -1,0 +1,24 @@
+Code in this directory performs tasks as described in the publication:
+
+Sefton-Nash, E., Williams, J-P., Greenhagen, B. T., Aye, K.-M. and Paige, D. A. 
+'Diviner Lunar Radiometer gridded brightness temperatures from geodesic binning of 
+modeled fields of view', Submitted to Icarus for publication.
+
+File inventory:
+
+make_icosbin.sh   - Builds the FORTRAN programs. Requires the Intel ifort and icc 
+                    compilers.
+bin_data.csh      - Script to run the raw modelled EFOVs through the binning pipeline.
+c7_171_176_83_85* - Files with this stem contain EFOVs that are raw (.rfile) and 
+                    binned and linked (.gfile, .ofile). Files with the extension .des
+                    are descriptor files, headers for the binary data files.
+ptrinum.f         - Assigns a triangle number to each record based on the records'
+                    lat and lon.
+ptrigather.f      - Gathers and averages parts of EFOVs that reside in the same
+                    triangular bin on the icosahedral grid.
+ptrilink.f        - Within one obseravtion, separates the invariant fields in the 
+                    record from the variant ones and writes observations as entries
+                    in a linked list. One record per observation is stored in *.ofile.
+                    One record per triangle in each observation is stored in *.gfile.
+LICENSE           - License file.
+README            - This file.

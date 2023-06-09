@@ -16,7 +16,7 @@ ptrinum.f         - Assigns a triangle number to each record based on the record
                     lat and lon.
 ptrigather.f      - Gathers and averages parts of EFOVs that reside in the same
                     triangular bin on the icosahedral grid.
-ptrilink.f        - Within one obseravtion, separates the invariant fields in the 
+ptrilink.f        - Within one observation, separates the invariant fields in the 
                     record from the variant ones and writes observations as entries
                     in a linked list. One record per observation is stored in *.ofile.
                     One record per triangle in each observation is stored in *.gfile.
